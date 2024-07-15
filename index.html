@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #splash-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #splash-screen img {
+            width: 200px; /* Ajuste o tamanho conforme necessário */
+        }
+        #content {
+            display: none;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('bantubet.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+        }
+        .container button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 15px 30px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .container button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="splash-screen">
+        <img src="ditoprologo.png" alt="Intro GIF">
+    </div>
+    <div id="content">
+        <div class="container">
+            <button onclick="window.location.href='hoje.html'">GRÁTIS</button>
+            <button onclick="window.location.href='desbloquear.html'">VIP</button>
+            <button onclick="window.location.href='t.me/ditoprotips'"> TELEGRAM</button>
+            <button onclick="window.location.href='https://seu-link-aqui.com'">DAR 5 ESTRELAS</button>
+            <button onclick="window.location.href='https://bantubet.co.ao/affiliates/?btag=1995095'">CRIAR CONTA BANTUBET</button>
+            
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('splash-screen').style.display = 'none';
+                document.getElementById('content').style.display = 'flex';
+            }, 3000); // 3000 ms = 3 seconds
+        };
+    </script>
+</body>
+</html>
